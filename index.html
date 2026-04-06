@@ -1001,7 +1001,7 @@
                 <p class="book-desc">I've been on every side of these deals — as a studio owner, a buyer, and now the broker. What I've seen is that the owners who get life-changing exits aren't luckier. They just started preparing earlier. This book shows you exactly how.</p>
                 <p class="book-desc" style="font-weight: 600; color: var(--color-charcoal);"><em>The Number Nobody Talks About</em> is your exit number — the one most owners never figure out how to reach. This book is how you get there.</p>
                 <form class="book-email-form" onsubmit="handleBookSignup(event)">
-                    <input type="email" placeholder="Your email address" required>
+                    <input type="email" name="email" placeholder="Your email address" required>
                     <button type="submit" class="btn-primary">Notify Me When It Launches</button>
                 </form>
             </div>
@@ -1234,23 +1234,58 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Form handler (placeholder)
+    // Contact / booking inquiry form
     function handleSubmit(e) {
         e.preventDefault();
         const form = e.target;
-        const data = new FormData(form);
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
 
-        // Replace this with your actual form handler (Formspree, Netlify Forms, etc.)
-        alert('Thanks for reaching out! This is a placeholder — connect this form to Formspree, Netlify Forms, or your preferred service.');
-        form.reset();
+        fetch('https://formspree.io/f/xwvwagje', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        })
+        .then(res => {
+            if (res.ok) {
+                form.innerHTML = '<p style="padding: 24px 0; font-size: 1.05rem; color: var(--color-clay); font-weight: 600;">Got it — I\'ll be in touch soon.</p>';
+            } else {
+                throw new Error();
+            }
+        })
+        .catch(() => {
+            btn.disabled = false;
+            btn.textContent = 'Send Inquiry';
+            alert('Something went wrong. Please try again or email mitch@boutiquefitnessbroker.com directly.');
+        });
     }
 
-    // Book signup handler (placeholder)
+    // Book notify signup
     function handleBookSignup(e) {
         e.preventDefault();
         const form = e.target;
-        alert('Thanks! You\'ll be the first to know when the book launches. (Connect this to your email list — Mailchimp, ConvertKit, etc.)');
-        form.reset();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Saving...';
+
+        fetch('https://formspree.io/f/xeepvydv', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        })
+        .then(res => {
+            if (res.ok) {
+                form.innerHTML = '<p style="font-size: 1rem; color: var(--color-clay); font-weight: 600; margin-top: 28px;">You\'re on the list. I\'ll let you know the moment it\'s out.</p>';
+            } else {
+                throw new Error();
+            }
+        })
+        .catch(() => {
+            btn.disabled = false;
+            btn.textContent = 'Notify Me When It Launches';
+            alert('Something went wrong. Please try again.');
+        });
     }
 </script>
 
