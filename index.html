@@ -499,43 +499,37 @@
             }
         }
 
-        /* ——— Testimonials ——— */
-        .testimonials { background: var(--color-deep-brown); color: white; }
-
-        .testimonials .section-label { color: var(--color-clay); }
-        .testimonials .section-title { color: white; }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            margin-top: 48px;
+        /* ——— Testimonial Interstitials ——— */
+        .testimonial-strip {
+            background: var(--color-deep-brown);
+            color: white;
+            padding: 52px 24px;
+            text-align: center;
         }
 
-        .testimonial-card {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 32px;
+        .testimonial-strip-inner {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
-        .testimonial-card blockquote {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 20px;
+        .testimonial-strip blockquote {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: rgba(255,255,255,0.88);
             font-style: italic;
+            margin-bottom: 20px;
         }
 
-        .testimonial-author {
+        .testimonial-strip .testimonial-author {
             font-weight: 600;
             font-size: 0.95rem;
+            color: white;
         }
 
-        .testimonial-role {
+        .testimonial-strip .testimonial-role {
             font-size: 0.85rem;
             color: rgba(255,255,255,0.5);
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         /* ——— Video ——— */
@@ -757,7 +751,8 @@
             }
 
             .topics-grid { grid-template-columns: 1fr; }
-            .testimonials-grid { grid-template-columns: 1fr; }
+            .testimonial-strip { padding: 40px 20px; }
+            .testimonial-strip blockquote { font-size: 1rem; }
             .contact-grid { grid-template-columns: 1fr; }
 
             .section-title { font-size: 2rem; }
@@ -973,6 +968,15 @@
     </div>
 </section>
 
+<!-- Testimonial: Katie Philipp -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Mitch brings more than expertise to the stage—he brings a level of wisdom and trust that genuinely resonates, no matter the room. His career has evolved from entrepreneur to advising on complex, high-level transactions, but what stands out most is how deeply he understands people. He has a way of cutting through the noise to what really matters—relationships, trust, and the decisions that shape meaningful outcomes. That's what makes him such a credible and compelling voice, well beyond any one industry."</blockquote>
+        <div class="testimonial-author">Katie Philipp</div>
+        <div class="testimonial-role">Director of Education, HFA</div>
+    </div>
+</div>
+
 <!-- Speaking Topics -->
 <section class="topics" id="topics">
     <div class="section-inner">
@@ -1017,6 +1021,15 @@
     </div>
 </section>
 
+<!-- Testimonial: Jennifer -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"From start to finish, Mitch set my listing, negotiations and sale up for success. Their knowledge and guidance made a stressful process feel manageable."</blockquote>
+        <div class="testimonial-author">Jennifer</div>
+        <div class="testimonial-role">Owner, Twist Yoga (13 years)</div>
+    </div>
+</div>
+
 <!-- Book -->
 <section class="book-section" id="book">
     <div class="section-inner">
@@ -1040,6 +1053,15 @@
         </div>
     </div>
 </section>
+
+<!-- Testimonial: Holly Coltea -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Mitch's attention to detail and strong business sense were so impressive, and they did not waiver throughout the entire process."</blockquote>
+        <div class="testimonial-author">Holly Coltea</div>
+        <div class="testimonial-role">Studio Owner</div>
+    </div>
+</div>
 
 <!-- Videos -->
 <section class="videos-section" id="videos">
@@ -1281,35 +1303,15 @@
     </div>
 </section>
 
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-    <div class="section-inner">
-        <p class="section-label fade-in">What People Say</p>
-        <h2 class="section-title fade-in">From event organizers and attendees</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <blockquote>"Mitch brings more than expertise to the stage—he brings a level of wisdom and trust that genuinely resonates, no matter the room. His career has evolved from entrepreneur to advising on complex, high-level transactions, but what stands out most is how deeply he understands people. He has a way of cutting through the noise to what really matters—relationships, trust, and the decisions that shape meaningful outcomes. That's what makes him such a credible and compelling voice, well beyond any one industry."</blockquote>
-                <div class="testimonial-author">Katie Philipp</div>
-                <div class="testimonial-role">Director of Education, HFA</div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <blockquote>"From start to finish, Mitch set my listing, negotiations and sale up for success. Their knowledge and guidance made a stressful process feel manageable."</blockquote>
-                <div class="testimonial-author">Jennifer</div>
-                <div class="testimonial-role">Owner, Twist Yoga (13 years)</div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <blockquote>"Mitch's attention to detail and strong business sense were so impressive, and they did not waiver throughout the entire process."</blockquote>
-                <div class="testimonial-author">Holly Coltea</div>
-                <div class="testimonial-role">Studio Owner</div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <blockquote>"Almost no effort on my part — Mitch did ALL the work, talked me through each step, and then closed the deal for me. Highly recommend."</blockquote>
-                <div class="testimonial-author">David Creecy</div>
-                <div class="testimonial-role">Studio Owner</div>
-            </div>
-        </div>
+
+<!-- Testimonial: David Creecy -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Almost no effort on my part — Mitch did ALL the work, talked me through each step, and then closed the deal for me. Highly recommend."</blockquote>
+        <div class="testimonial-author">David Creecy</div>
+        <div class="testimonial-role">Studio Owner</div>
     </div>
-</section>
+</div>
 
 <!-- Contact -->
 <section class="contact" id="contact">
