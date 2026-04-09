@@ -526,7 +526,7 @@
             white-space: nowrap;
         }
 
-        .seen-at-names {
+        .seen-at-logos {
             display: flex;
             align-items: center;
             gap: 40px;
@@ -534,12 +534,25 @@
             justify-content: center;
         }
 
-        .seen-at-names span {
+        .seen-at-logos img {
+            height: 28px;
+            width: auto;
+            opacity: 0.55;
+            filter: grayscale(100%);
+            transition: opacity 0.2s, filter 0.2s;
+        }
+
+        .seen-at-logos img:hover {
+            opacity: 0.9;
+            filter: grayscale(0%);
+        }
+
+        .seen-at-logos span {
             font-family: var(--font-heading);
             font-size: 1.05rem;
             color: var(--color-deep-brown);
             white-space: nowrap;
-            opacity: 0.7;
+            opacity: 0.5;
         }
 
         /* ——— Testimonial Interstitials ——— */
@@ -986,12 +999,12 @@
 <div class="seen-at">
     <div class="seen-at-inner">
         <span class="seen-at-label">As Seen At</span>
-        <div class="seen-at-names">
-            <span>HFA</span>
-            <span>IHRSA</span>
-            <span>Mindbody</span>
-            <span>barre3</span>
-            <span>ClubReady</span>
+        <div class="seen-at-logos">
+            <img src="logo-hfa.svg" alt="Health & Fitness Association">
+            <img src="logo-mindbody.png" alt="Mindbody">
+            <img src="logo-barre3.png" alt="barre3">
+            <img src="logo-clubready.png" alt="ClubReady">
+            <img src="logo-idea.svg" alt="IDEA Health & Fitness Association">
             <span>BFS CEO Summit</span>
         </div>
     </div>
