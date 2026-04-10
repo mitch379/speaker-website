@@ -366,11 +366,15 @@
         .topic-audiences {
             margin-top: auto;
             padding-top: 16px;
-            display: grid;
-            grid-template-columns: auto auto;
-            justify-items: center;
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 8px;
+        }
+        .topic-audience-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
         }
 
         .audience-tag {
@@ -1080,10 +1084,14 @@
                     <h3>What Buyers Look For — And How to Be Ready Whether You Sell in Two Years or Ten</h3>
                     <p>Every owner will exit eventually — the only question is whether you're ready when it happens. I've sat across the table from dozens of buyers, and the things they pay more for are the same things that make your business better right now: clean financials, a real team, and systems that transfer. You'll leave with moves you can start making today.</p>
                     <div class="topic-audiences">
-                        <span class="audience-tag">Industry Conferences</span>
-                        <span class="audience-tag">Owner Retreats</span>
-                        <span class="audience-tag">Franchise Events</span>
-                        <span class="audience-tag">Workshops</span>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Industry Conferences</span>
+                            <span class="audience-tag">Owner Retreats</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Franchise Events</span>
+                            <span class="audience-tag">Workshops</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1093,10 +1101,14 @@
                     <h3>From Buyer to Seller to Broker: What 70 Deals Taught Me About Main Street M&amp;A</h3>
                     <p>I've given this talk to franchise owners, first-time entrepreneurs, and seasoned operators — and it lands every time. The stories are real, the lessons are specific, and people see themselves in it. No slides, no theory — just the stuff that actually happens when someone tries to buy or sell a business. It's the session your attendees will bring up at dinner.</p>
                     <div class="topic-audiences">
-                        <span class="audience-tag">Keynotes</span>
-                        <span class="audience-tag">Panels</span>
-                        <span class="audience-tag">Trade Shows</span>
-                        <span class="audience-tag">Summits</span>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Keynotes</span>
+                            <span class="audience-tag">Panels</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Trade Shows</span>
+                            <span class="audience-tag">Summits</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1106,10 +1118,14 @@
                     <h3>The Emotional, Financial, and Legal Journey from Listing to Close and Beyond</h3>
                     <p>Confidentiality, competing offers, due diligence, SBA financing, and the emotional weight of letting go of something you built. I walk through every stage of the process — where deals fall apart, what the hardest moments actually feel like, and why the owners who come out ahead are never the ones who tried to do it alone.</p>
                     <div class="topic-audiences">
-                        <span class="audience-tag">Peer Groups</span>
-                        <span class="audience-tag">Aspiring Buyers</span>
-                        <span class="audience-tag">Entrepreneurship Events</span>
-                        <span class="audience-tag">Masterminds</span>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Peer Groups</span>
+                            <span class="audience-tag">Aspiring Buyers</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Entrepreneurship Events</span>
+                            <span class="audience-tag">Masterminds</span>
+                        </div>
                     </div>
                 </div>
             </div>
