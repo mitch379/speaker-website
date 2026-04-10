@@ -366,12 +366,11 @@
         .topic-audiences {
             margin-top: auto;
             padding-top: 16px;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-items: start;
+            justify-content: center;
             gap: 8px;
-            max-width: 260px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .audience-tag {
