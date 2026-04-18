@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Don't index the BFB-embed source variants — they're duplicates of /speaker on the BFB site.
+Disallow: /speaker-for-bfb.html
+Disallow: /speaker-for-bfb-sqsp.html
+Disallow: /speaker-for-bfb-sqsp-preview.html
+
+Sitemap: https://mitchmcginleyspeaks.com/sitemap.xml
