@@ -9,7 +9,8 @@
 
         /* ——— Squarespace Fluid Engine grid fix: force this block to span full width ——— */
         /* The BFB /speaker Code Block is saved at grid-area 1/2/416/6 which leaves a 606px empty col-1 gutter.
-           Override to span the full 24-col Fluid Engine grid. */
+           Override to span the full 24-col Fluid Engine grid. CSS-only didn't beat Squarespace's runtime
+           placement — runtime JS below is what actually wins (see end of file). */
         .fe-block-yui_3_17_2_1_1776511983851_428 { grid-area: 1 / 1 / 9 / 9 !important; }
         @media (min-width: 768px) {
             .fe-block-yui_3_17_2_1_1776511983851_428 { grid-area: 1 / 1 / 416 / 25 !important; }
@@ -1352,4 +1353,30 @@
         });
     }
 
+</script>
+
+<!-- ——— Squarespace Fluid Engine grid fix (runtime) ———
+     CSS !important rules in the <style> above are not winning against Squarespace's runtime
+     grid placement. This script forces the inline grid-area on load + on resize. -->
+<script>
+(function() {
+    var SELECTOR = '.fe-block-yui_3_17_2_1_1776511983851_428';
+    var apply = function() {
+        var b = document.querySelector(SELECTOR);
+        if (!b) return;
+        // Span full 24-col Fluid Engine grid on desktop; full 8-col on mobile
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            b.style.setProperty('grid-area', '1 / 1 / 416 / 25', 'important');
+        } else {
+            b.style.setProperty('grid-area', '1 / 1 / 9 / 9', 'important');
+        }
+    };
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', apply);
+    } else {
+        apply();
+    }
+    window.addEventListener('load', apply);
+    window.addEventListener('resize', apply);
+})();
 </script>
