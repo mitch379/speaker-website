@@ -1,0 +1,1347 @@
+<!-- Mitch McGinley — Speaker page (BFB embed, SEO variant) -->
+<!-- All CSS scoped to .mitch-speaker so it cannot affect surrounding Squarespace styles -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+        /* ——— Reset & Base ——— */
+        .mitch-speaker *, .mitch-speaker *::before, .mitch-speaker *::after, .mitch-speaker *::before, .mitch-speaker *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        .mitch-speaker {
+            --color-cream: #F4F6F8;
+            --color-warm-white: #FFFFFF;
+            --color-sand: #D5DCE1;
+            --color-clay: #C8964A;
+            --color-terracotta: #C8964A;
+            --color-deep-brown: #2D4A5A;
+            --color-charcoal: #2C3E4A;
+            --color-muted: #5A7283;
+            --font-heading: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+
+        .mitch-speaker { scroll-behavior: smooth; }
+
+        .mitch-speaker {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            background: var(--color-cream);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mitch-speaker img { max-width: 100%; display: block; }
+        .mitch-speaker a { color: inherit; text-decoration: none; }
+
+        /* ——— Navigation ——— */
+        .mitch-speaker nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(244, 246, 248, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-sand);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .mitch-speaker nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .mitch-speaker .nav-inner {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 136px 0 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .mitch-speaker .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--color-deep-brown);
+        }
+
+        .mitch-speaker .nav-links { display: flex; gap: 32px; align-items: center; }
+
+        .mitch-speaker .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-muted);
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        .mitch-speaker .nav-links a:hover { color: var(--color-deep-brown); }
+
+        .mitch-speaker .nav-cta {
+            background: var(--color-terracotta) !important;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 0.875rem !important;
+            font-weight: 600 !important;
+            transition: background 0.2s, transform 0.2s !important;
+        }
+
+        .mitch-speaker .nav-cta:hover {
+            background: #b0833e !important;
+            transform: translateY(-1px);
+        }
+
+        .mitch-speaker .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .mitch-speaker .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-deep-brown);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ——— Hero ——— */
+        .mitch-speaker .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 24px 80px;
+            background: var(--color-cream);
+        }
+
+        .mitch-speaker .hero-inner {
+            max-width: 1260px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: center;
+            padding-left: 56px;
+        }
+
+        .mitch-speaker .hero-text h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            line-height: 1.15;
+            color: var(--color-deep-brown);
+            margin-bottom: 14px;
+        }
+
+        .mitch-speaker .hero-text .subtitle {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        .mitch-speaker .hero-text .subtitle em {
+            color: var(--color-clay);
+            font-style: italic;
+        }
+
+        .mitch-speaker .hero-text .tagline {
+            font-size: 1.05rem;
+            color: var(--color-muted);
+            margin-bottom: 36px;
+            max-width: 580px;
+            line-height: 1.8;
+        }
+
+        .mitch-speaker .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        .mitch-speaker .btn-primary {
+            display: inline-block;
+            background: var(--color-terracotta);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mitch-speaker .btn-primary:hover {
+            background: #b0833e;
+            transform: translateY(-2px);
+        }
+
+        .mitch-speaker .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-deep-brown);
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--color-sand);
+            transition: border-color 0.2s, transform 0.2s;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .mitch-speaker .btn-secondary:hover {
+            border-color: var(--color-clay);
+            transform: translateY(-2px);
+        }
+
+        .mitch-speaker .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mitch-speaker .headshot-img {
+            width: 340px;
+            height: 420px;
+            border-radius: 16px;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* ——— Section Shared ——— */
+        .mitch-speaker section { padding: 100px 24px; }
+
+        .mitch-speaker .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: 12px;
+        }
+
+        .mitch-speaker .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-deep-brown);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .mitch-speaker .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ——— About ——— */
+        .mitch-speaker .about { background: var(--color-warm-white); }
+
+        .mitch-speaker .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+
+        .mitch-speaker .about-text p {
+            color: var(--color-charcoal);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .mitch-speaker .about-text .section-label {
+            color: var(--color-terracotta);
+        }
+
+        .mitch-speaker .about-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .mitch-speaker .stat-card {
+            background: var(--color-cream);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--color-sand);
+        }
+
+        .mitch-speaker .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.75rem;
+            color: var(--color-deep-brown);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .mitch-speaker .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-muted);
+            font-weight: 500;
+        }
+
+        /* ——— Speaking Topics ——— */
+        .mitch-speaker .topics { background: var(--color-cream); }
+
+        .mitch-speaker .topics .section-inner {
+            max-width: 1220px;
+        }
+
+        .mitch-speaker .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .mitch-speaker .topic-card {
+            background: var(--color-warm-white);
+            border-radius: 12px;
+            padding: 0;
+            border: 1px solid var(--color-sand);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mitch-speaker .topic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+        }
+
+        .mitch-speaker .topic-photo {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mitch-speaker .topic-card-body {
+            padding: 28px 28px 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mitch-speaker .topic-card-body p {
+            flex: 1;
+        }
+
+        .mitch-speaker .topic-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            color: var(--color-deep-brown);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .mitch-speaker .topic-card p {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .mitch-speaker .topic-audiences {
+            margin-top: auto;
+            padding-top: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .mitch-speaker .topic-audience-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .mitch-speaker .audience-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: var(--color-cream);
+            color: var(--color-muted);
+            border: 1px solid var(--color-sand);
+        }
+
+        /* ——— Book ——— */
+        .mitch-speaker .book-section { background: var(--color-warm-white); }
+
+        .mitch-speaker .book-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        .mitch-speaker .book-cover-wrap img {
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 8px 8px 32px rgba(0,0,0,0.15), -2px 0 8px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        .mitch-speaker .book-cover-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mitch-speaker .book-cover-placeholder {
+            width: 280px;
+            height: 400px;
+            background: linear-gradient(145deg, var(--color-deep-brown), #3D6070);
+            border-radius: 4px 16px 16px 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 28px;
+            text-align: center;
+            box-shadow: 8px 8px 32px rgba(0,0,0,0.15), -2px 0 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .mitch-speaker .book-cover-placeholder::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .mitch-speaker .book-cover-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: white;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .mitch-speaker .book-cover-subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .mitch-speaker .book-cover-author {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-clay);
+            letter-spacing: 0.06em;
+        }
+
+        .mitch-speaker .book-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--color-deep-brown);
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+
+        .mitch-speaker .book-content h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .mitch-speaker .book-content p {
+            color: var(--color-charcoal);
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .mitch-speaker .book-content .book-desc {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        .mitch-speaker .book-email-form {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .mitch-speaker .book-email-form input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 18px;
+            border: 2px solid var(--color-sand);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: border-color 0.2s;
+            background: var(--color-cream);
+        }
+
+        .mitch-speaker .book-email-form input:focus {
+            outline: none;
+            border-color: var(--color-clay);
+        }
+
+        .mitch-speaker .book-email-form button {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .mitch-speaker .book-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .mitch-speaker .book-email-form {
+                justify-content: center;
+            }
+        }
+
+        /* ——— As Seen At ——— */
+        .mitch-speaker .seen-at {
+            background: var(--color-warm-white);
+            padding: 36px 24px;
+            border-bottom: 1px solid var(--color-sand);
+        }
+
+        .mitch-speaker .seen-at-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mitch-speaker .seen-at-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-muted);
+            white-space: nowrap;
+        }
+
+        .mitch-speaker .seen-at-logos {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mitch-speaker .seen-at-logos img {
+            height: 24px;
+            width: auto;
+            opacity: 0.55;
+            filter: grayscale(100%);
+            transition: opacity 0.2s, filter 0.2s;
+        }
+
+        .mitch-speaker .seen-at-logos img:hover {
+            opacity: 0.9;
+            filter: grayscale(0%);
+        }
+
+        .mitch-speaker .seen-at-logos span {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: var(--color-deep-brown);
+            white-space: nowrap;
+            opacity: 0.5;
+        }
+
+        /* ——— Testimonial Interstitials ——— */
+        .mitch-speaker .testimonial-strip {
+            background: var(--color-deep-brown);
+            color: white;
+            padding: 52px 24px;
+            text-align: center;
+        }
+
+        .mitch-speaker .testimonial-strip-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .mitch-speaker .testimonial-strip blockquote {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: rgba(255,255,255,0.88);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .mitch-speaker .testimonial-strip .testimonial-author {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .mitch-speaker .testimonial-strip .testimonial-role {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 3px;
+        }
+
+        /* ——— Video ——— */
+        .mitch-speaker .video { background: var(--color-warm-white); }
+
+        .mitch-speaker .video-container {
+            margin-top: 48px;
+            max-width: 800px;
+        }
+
+        .mitch-speaker .video-placeholder {
+            aspect-ratio: 16 / 9;
+            background: var(--color-sand);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        .mitch-speaker .play-btn {
+            width: 64px;
+            height: 64px;
+            background: var(--color-terracotta);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mitch-speaker .play-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            margin-left: 3px;
+        }
+
+        /* ——— Photo Gallery ——— */
+        .mitch-speaker .gallery { background: var(--color-cream); }
+
+        .mitch-speaker .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .mitch-speaker .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            position: relative;
+        }
+
+        .mitch-speaker .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .mitch-speaker .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .mitch-speaker .gallery-item.landscape {
+            aspect-ratio: 3 / 2;
+            grid-column: span 2;
+        }
+
+        .mitch-speaker .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.55));
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mitch-speaker .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        @media (max-width: 900px) {
+            .mitch-speaker .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .mitch-speaker .gallery-item.landscape { grid-column: span 2; }
+        }
+
+        @media (max-width: 600px) {
+            .mitch-speaker .gallery-grid { grid-template-columns: 1fr; }
+            .mitch-speaker .gallery-item.landscape { grid-column: span 1; }
+        }
+
+        /* ——— Contact ——— */
+        .mitch-speaker .contact {
+            background: var(--color-cream);
+        }
+
+        .mitch-speaker .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 48px;
+            align-items: start;
+        }
+
+        .mitch-speaker .contact-info p {
+            font-size: 1.05rem;
+            color: var(--color-muted);
+            margin-bottom: 32px;
+            line-height: 1.8;
+            max-width: 440px;
+        }
+
+        .mitch-speaker .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        .mitch-speaker .contact-detail .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-sand);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .mitch-speaker .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mitch-speaker .form-row { display: flex; gap: 16px; }
+        .mitch-speaker .form-row > * { flex: 1; }
+
+        .mitch-speaker .contact-form input, .mitch-speaker .contact-form textarea, .mitch-speaker .contact-form select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--color-sand);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            background: var(--color-warm-white);
+            color: var(--color-charcoal);
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        .mitch-speaker .contact-form input:focus, .mitch-speaker .contact-form textarea:focus, .mitch-speaker .contact-form select:focus {
+            border-color: var(--color-terracotta);
+        }
+
+        .mitch-speaker .contact-form textarea { resize: vertical; min-height: 120px; }
+
+        .mitch-speaker .contact-form .btn-primary { width: 100%; text-align: center; }
+
+        /* ——— Footer ——— */
+        .mitch-speaker footer {
+            background: var(--color-deep-brown);
+            color: rgba(255,255,255,0.5);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .mitch-speaker footer a { color: rgba(255,255,255,0.7); }
+        .mitch-speaker footer a:hover { color: white; }
+
+        .mitch-speaker .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mitch-speaker .footer-links { display: flex; gap: 24px; }
+
+        /* ——— Responsive ——— */
+        @media (max-width: 900px) {
+            .mitch-speaker .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .mitch-speaker .hero-text h1 { font-size: 2.5rem; }
+            .mitch-speaker .hero-text .tagline { margin: 0 auto 36px; }
+            .mitch-speaker .hero-buttons { justify-content: center; }
+
+            .mitch-speaker .hero-image { order: -1; }
+            .mitch-speaker .headshot-img { width: 280px; height: 340px; margin: 0 auto; }
+
+            .mitch-speaker .about-grid { grid-template-columns: 1fr; }
+
+            .mitch-speaker .about-stats {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .mitch-speaker .topics-grid { grid-template-columns: 1fr; }
+            .mitch-speaker .testimonial-strip { padding: 40px 20px; }
+            .mitch-speaker .testimonial-strip blockquote { font-size: 1rem; }
+            .mitch-speaker .contact-grid { grid-template-columns: 1fr; }
+
+            .mitch-speaker .section-title { font-size: 2rem; }
+
+            .mitch-speaker .nav-links { display: none; }
+            .mitch-speaker .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--color-warm-white);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid var(--color-sand);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+            .mitch-speaker .mobile-menu-btn { display: block; }
+
+            .mitch-speaker .footer-inner { flex-direction: column; gap: 16px; }
+        }
+
+        @media (max-width: 600px) {
+            .mitch-speaker section { padding: 64px 20px; }
+            .mitch-speaker .hero { padding: 80px 20px 60px; }
+            .mitch-speaker .hero-text h1 { font-size: 2rem; }
+            .mitch-speaker .form-row { flex-direction: column; gap: 16px; }
+
+            .mitch-speaker .about-stats { flex-direction: column; }
+        }
+
+        /* ——— Media Grid ——— */
+        .mitch-speaker .media-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .mitch-speaker .media-card {
+            display: block;
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-sand);
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .mitch-speaker .media-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .mitch-speaker .media-show {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--color-deep-brown);
+            margin-bottom: 8px;
+        }
+
+        .mitch-speaker .media-episode {
+            font-size: 0.875rem;
+            color: var(--color-muted);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1100px) {
+            .mitch-speaker .media-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 750px) {
+            .mitch-speaker .media-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .mitch-speaker .media-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ——— Videos ——— */
+        .mitch-speaker .videos-section { background: var(--color-cream); }
+
+        .mitch-speaker .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .mitch-speaker .video-card {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-sand);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .mitch-speaker .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .mitch-speaker .video-thumb {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mitch-speaker .video-title {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            color: var(--color-deep-brown);
+            padding: 14px 16px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 1100px) {
+            .mitch-speaker .videos-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 750px) {
+            .mitch-speaker .videos-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .mitch-speaker .videos-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ——— Animations ——— */
+        .mitch-speaker .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .mitch-speaker .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+</style>
+
+<div class="mitch-speaker">
+<!-- Navigation stripped for BFB page embed — BFB provides its own nav -->
+
+<!-- Hero -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>Design Your Ideal Exit</h1>
+            <p class="subtitle">Author, <em>The Number Nobody Talks About</em> — How to Prepare, Price and<br>Sell Your Business on Your Terms</p>
+            <p class="tagline">Since 2020, I've brokered 70+ business sales totaling $30M — primarily in boutique fitness, health and wellness — with an 80% close rate, four times the industry average. I speak about the decisions that separate a legacy-defining exit from a disappointing one, and why the best time to start planning is now. Leave with a target valuation, a roadmap to your exit, and the confidence to get started today.</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/d/cpd5-bs6-9hg" target="_blank" rel="noopener" class="btn-primary">Book Mitch to Speak</a>
+                <a href="https://mitchmcginleyspeaks.com/mitch-mcginley-speaker-one-sheet.pdf" target="_blank" class="btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Speaker One-Sheet
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://mitchmcginleyspeaks.com/headshot.jpg" alt="Mitch McGinley" class="headshot-img">
+        </div>
+    </div>
+</section>
+
+<!-- As Seen At -->
+<div class="seen-at">
+    <div class="seen-at-inner">
+        <div class="seen-at-logos">
+            <img src="https://mitchmcginleyspeaks.com/logo-hfa.svg" alt="Health & Fitness Association">
+            <img src="https://mitchmcginleyspeaks.com/logo-mindbody.png" alt="Mindbody">
+            <img src="https://mitchmcginleyspeaks.com/logo-barre3.png" alt="barre3">
+            <img src="https://mitchmcginleyspeaks.com/logo-clubready.png" alt="ClubReady">
+            <img src="https://mitchmcginleyspeaks.com/logo-fitgrid.png" alt="FitGrid">
+            <img src="https://mitchmcginleyspeaks.com/logo-netgym.png" alt="NetGym">
+            <span>IDEA World</span>
+            <img src="https://mitchmcginleyspeaks.com/logo-idea.svg" alt="IDEA">
+            <span>BFS CEO Summit</span>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <p class="section-label">About</p>
+                <h2 class="section-title">From business owner to dealmaker</h2>
+                <p>In 2012, my wife Karson and I bought a yoga studio in San Diego, grew it into a thriving community business, and sold it in 2019 for five times what we paid. That experience — seeing a business from every side as an owner, operator, buyer, and seller — became the foundation for everything I do now.</p>
+                <p>I created Boutique Fitness Broker in 2020. It's the only M&A advisory focused entirely on boutique fitness, health, wellness, and service businesses — yoga, Pilates, Lagree, spa, recovery, and beyond. These are passion-led, owner-operator businesses where community and retention are everything.</p>
+                <p>The patterns I've seen across 70+ deals apply far beyond fitness. I help business owners envision their next chapter — and I deliver an engaging, actionable session that event planners can count on to leave a lasting impact on the room.</p>
+            </div>
+            <div class="about-stats fade-in">
+                <div class="stat-card">
+                    <div class="stat-number">70+</div>
+                    <div class="stat-label">Deals Closed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Close Rate (4x avg)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$30M</div>
+                    <div class="stat-label">Transaction Volume</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial: Katie Philipp -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Mitch brings more than expertise to the stage—he brings a level of wisdom and trust that genuinely resonates, no matter the room. His career has evolved from entrepreneur to advising on complex, high-level transactions, but what stands out most is how deeply he understands people. He has a way of cutting through the noise to what really matters—relationships, trust, and the decisions that shape meaningful outcomes. That's what makes him such a credible and compelling voice, well beyond any one industry."</blockquote>
+        <div class="testimonial-author">Katie Philipp</div>
+        <div class="testimonial-role">Director of Education, HFA</div>
+    </div>
+</div>
+
+<!-- Speaking Topics -->
+<section class="topics" id="topics">
+    <div class="section-inner">
+        <p class="section-label fade-in">Speaking Topics</p>
+        <h2 class="section-title fade-in">Forged in real deals. Refined on real stages.</h2>
+        <div class="topics-grid">
+            <div class="topic-card fade-in">
+                <img src="https://mitchmcginleyspeaks.com/topic1.jpg" alt="Planning and preparation" class="topic-photo">
+                <div class="topic-card-body">
+                    <h3>What Buyers Look For — And How to Be Ready Whether You Sell in Two Years or Ten</h3>
+                    <p>Every owner will exit eventually — the only question is whether you're ready when it happens. I've sat across the table from dozens of buyers, and the things they pay more for are the same things that make your business better right now: clean financials, a real team, and systems that transfer. You'll leave with moves you can start making today.</p>
+                    <div class="topic-audiences">
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Industry Conferences</span>
+                            <span class="audience-tag">Owner Retreats</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Franchise Events</span>
+                            <span class="audience-tag">Workshops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-card fade-in">
+                <img src="https://mitchmcginleyspeaks.com/topic2.jpg" alt="Small town main street storefronts" class="topic-photo">
+                <div class="topic-card-body">
+                    <h3>From Buyer to Seller to Broker: What 70 Deals Taught Me About Main Street M&amp;A</h3>
+                    <p>I've given this talk to franchise owners, first-time entrepreneurs, and seasoned operators — and it lands every time. The stories are real, the lessons are specific, and people see themselves in it. No slides, no theory — just the stuff that actually happens when someone tries to buy or sell a business. It's the session your attendees will bring up at dinner.</p>
+                    <div class="topic-audiences">
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Keynotes</span>
+                            <span class="audience-tag">Panels</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Trade Shows</span>
+                            <span class="audience-tag">Summits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-card fade-in">
+                <img src="https://mitchmcginleyspeaks.com/topic3.jpg" alt="Winding road through a forest" class="topic-photo">
+                <div class="topic-card-body">
+                    <h3>The Emotional, Financial, and Legal Journey from Listing to Close and Beyond</h3>
+                    <p>Confidentiality, competing offers, due diligence, SBA financing, and the emotional weight of letting go of something you built. I walk through every stage of the process — where deals fall apart, what the hardest moments actually feel like, and why the owners who come out ahead are never the ones who tried to do it alone.</p>
+                    <div class="topic-audiences">
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Peer Groups</span>
+                            <span class="audience-tag">Aspiring Buyers</span>
+                        </div>
+                        <div class="topic-audience-row">
+                            <span class="audience-tag">Entrepreneurship Events</span>
+                            <span class="audience-tag">Masterminds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial: Laura Munkholm -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Mitch is someone who is equally brilliant at what he does and genuinely invested in the human being sitting across from him. What he has written here is so much more than a guide to selling your business. It is a love letter to every studio owner who has poured their whole self into something and deserves to be seen (and paid) for it.<br>Read this book. Then call Mitch. In that order."</blockquote>
+        <div class="testimonial-author">Laura Munkholm</div>
+        <div class="testimonial-role">Co-Founder & President, Walla</div>
+    </div>
+</div>
+
+<!-- Book -->
+<section class="book-section" id="book">
+    <div class="section-inner">
+        <p class="section-label fade-in">The Book</p>
+        <h2 class="section-title fade-in">The Number Nobody Talks About</h2>
+        <div class="book-grid">
+            <div class="book-content fade-in">
+                <p style="font-style: italic; color: var(--color-muted); margin-bottom: 1.25rem;">For business owners who are starting to think about what's next — and want to be ready when the time comes.</p>
+                <p class="book-desc">Most owners never think about their exit until it's too late — and by then, the right buyer at the right price with the right terms isn't waiting around. This book closes that gap. It's a step-by-step guide to preparing, pricing, and selling your business on your terms. Written from the boutique fitness world, where I've brokered 70+ deals, but the playbook applies to any owner-operated business.</p>
+                <p class="book-desc" style="font-weight: 600; color: var(--color-charcoal);"><em>The Number Nobody Talks About</em> is your exit number — the one that changes your life. This book is how you get there.</p>
+                <form class="book-email-form" onsubmit="handleBookSignup(event)">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-primary">Notify Me When It Launches</button>
+                </form>
+            </div>
+            <div class="book-cover-wrap fade-in">
+                <img src="https://mitchmcginleyspeaks.com/book-mockup.png" alt="The Number Nobody Talks About by Mitch McGinley">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial: Holly Coltea -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Mitch's attention to detail and strong business sense were so impressive, and they did not waiver throughout the entire process."</blockquote>
+        <div class="testimonial-author">Holly Coltea</div>
+        <div class="testimonial-role">Business Owner</div>
+    </div>
+</div>
+
+<!-- Videos -->
+<section class="videos-section" id="videos">
+    <div class="section-inner">
+        <p class="section-label fade-in">Videos</p>
+        <h2 class="section-title fade-in">See Mitch in action</h2>
+        <div class="videos-grid fade-in">
+            <a href="https://www.youtube.com/watch?v=F30pW0tbLLY" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/F30pW0tbLLY/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">Boutique Fitness Exits: What Every Studio Owner Needs to Know</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=W1RCR6lZ3I8" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/W1RCR6lZ3I8/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">How to Buy or Sell Your Pilates Studio — Everything You Need to Know</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=dGIaT32Wrew" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/dGIaT32Wrew/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">Buying &amp; Selling a Yoga Studio in 2026</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=zS09iEAXsQY" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/zS09iEAXsQY/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">Maximizing to Monetize — Boosting Your Business's Sale Value</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=DLCBLmSdMI4" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/DLCBLmSdMI4/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">Wellness &amp; Exit Strategies</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=jE1Np8eQJ9E" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/jE1Np8eQJ9E/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">How to Build, Scale &amp; Sell Your Health or Wellness Business</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=64BF3x9DvD4" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/64BF3x9DvD4/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">Betting On Yourself w/ Mitch McGinley</div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=9CXAis3f1h4" target="_blank" class="video-card">
+                <img class="video-thumb" src="https://img.youtube.com/vi/9CXAis3f1h4/mqdefault.jpg" alt="Video thumbnail">
+                <div class="video-title">How Wellness Founders Exit on Their Terms</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Podcasts -->
+<section class="video" id="podcasts">
+    <div class="section-inner">
+        <p class="section-label fade-in">Podcasts</p>
+        <h2 class="section-title fade-in">30+ podcast appearances</h2>
+        <div class="media-grid fade-in">
+            <a href="https://podcasts.apple.com/us/podcast/sharkpreneur/id993002971" target="_blank" class="media-card">
+                <div class="media-show">Sharkpreneur</div>
+                <div class="media-episode">Buying &amp; Selling Boutique Fitness Businesses</div>
+            </a>
+            <a href="https://podcasts.apple.com/us/podcast/financial-freedom-podcast-with-dr-christopher-h-loo-md-phd/id1568423486" target="_blank" class="media-card">
+                <div class="media-show">Financial Freedom Podcast</div>
+                <div class="media-episode">Boutique Fitness M&amp;A: How to Build, Scale &amp; Exit</div>
+            </a>
+            <a href="https://podcasts.apple.com/us/podcast/scaling-smart-exiting-strong-mitch-mcginley-on-selling/id1582126361?i=1000751486257" target="_blank" class="media-card">
+                <div class="media-show">Chasing the Insights</div>
+                <div class="media-episode">Scaling Smart, Exiting Strong</div>
+            </a>
+            <a href="https://www.buzzsprout.com/1754034/episodes/18313484" target="_blank" class="media-card">
+                <div class="media-show">Yoga Biz Champ w/ Michael Jay</div>
+                <div class="media-episode">Buying &amp; Selling a Yoga Studio in 2026</div>
+            </a>
+            <a href="https://femaleempowered.buzzsprout.com/1531532/episodes/17566878-episode-299-boutique-fitness-exits-what-every-studio-owner-needs-to-know-before-selling-with-mitch-mcginley-the-boutique-fitness-broker" target="_blank" class="media-card">
+                <div class="media-show">Female emPOWERED</div>
+                <div class="media-episode">Ep. 299 — What Every Studio Owner Needs to Know Before Selling</div>
+            </a>
+            <a href="https://findinggeniuspodcast.libsyn.com/exiting-with-purpose-mitch-mcginley-on-selling-scaling-businesses" target="_blank" class="media-card">
+                <div class="media-show">Finding Genius Podcast</div>
+                <div class="media-episode">Exiting with Purpose: Selling &amp; Scaling Businesses</div>
+            </a>
+            <a href="https://studiogrow.co/episode628/" target="_blank" class="media-card">
+                <div class="media-show">The Business of Boutique Fitness</div>
+                <div class="media-episode">Ep. 628 — Selling Your Studio</div>
+            </a>
+            <a href="https://starrcast.libsyn.com/2023/11" target="_blank" class="media-card">
+                <div class="media-show">StarrCast</div>
+                <div class="media-episode">Buying &amp; Selling Wellness Businesses: What You Need to Know</div>
+            </a>
+            <a href="https://www.21ce.biz/" target="_blank" class="media-card">
+                <div class="media-show">21st Century Entrepreneurship</div>
+                <div class="media-episode">From Yoga Studio Owner to Boutique Fitness Broker</div>
+            </a>
+            <a href="https://open.spotify.com/episode/4Afbr1A7tqH5Ww4btsSyzA" target="_blank" class="media-card">
+                <div class="media-show">The Pilates Business Podcast</div>
+                <div class="media-episode">Buying (or Selling) a Pilates Studio</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonial: David Creecy -->
+<div class="testimonial-strip fade-in">
+    <div class="testimonial-strip-inner">
+        <blockquote>"Almost no effort on my part — Mitch did ALL the work, talked me through each step, and then closed the deal for me. Highly recommend."</blockquote>
+        <div class="testimonial-author">David Creecy</div>
+        <div class="testimonial-role">Business Owner</div>
+    </div>
+</div>
+
+<!-- Contact / Book CTA (BFB variant — routes to Calendly, no on-page form) -->
+<section class="contact" id="contact">
+    <div class="section-inner" style="text-align: center;">
+        <p class="section-label fade-in">Book Mitch</p>
+        <h2 class="section-title fade-in">Let's talk about your event</h2>
+        <p class="fade-in" style="max-width: 620px; margin: 0 auto 32px; font-size: 1.05rem; color: var(--color-muted);">Every talk is tailored to your audience, your format, and what you want people walking away with. Grab a time directly, or email — I'll get back within 24 hours.</p>
+        <div class="fade-in" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center;">
+            <a href="https://calendly.com/d/cpd5-bs6-9hg" target="_blank" rel="noopener" class="btn-primary">Book a Free Consultation</a>
+            <a href="mailto:mitch@boutiquefitnessbroker.com" class="btn-secondary">mitch@boutiquefitnessbroker.com</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer stripped for BFB page embed — BFB provides its own footer -->
+</div>
+
+<script>
+
+    // Nav removed on BFB variant — guard so remaining scripts (fade-in, form) still run
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const navbar = document.getElementById('navbar');
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    }
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Contact / booking inquiry form
+    function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch('https://formspree.io/f/xwvwagje', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        })
+        .then(res => {
+            if (res.ok) {
+                form.innerHTML = '<p style="padding: 24px 0; font-size: 1.05rem; color: var(--color-clay); font-weight: 600;">Got it — I\'ll be in touch soon.</p>';
+            } else {
+                throw new Error();
+            }
+        })
+        .catch(() => {
+            btn.disabled = false;
+            btn.textContent = 'Send Inquiry';
+            alert('Something went wrong. Please try again or email mitch@boutiquefitnessbroker.com directly.');
+        });
+    }
+
+    // Book notify signup
+    function handleBookSignup(e) {
+        e.preventDefault();
+        const form = e.target;
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Saving...';
+
+        fetch('https://formspree.io/f/xeepvydv', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        })
+        .then(res => {
+            if (res.ok) {
+                form.innerHTML = '<p style="font-size: 1rem; color: var(--color-clay); font-weight: 600; margin-top: 28px;">You\'re on the list. I\'ll let you know the moment it\'s out.</p>';
+            } else {
+                throw new Error();
+            }
+        })
+        .catch(() => {
+            btn.disabled = false;
+            btn.textContent = 'Notify Me When It Launches';
+            alert('Something went wrong. Please try again.');
+        });
+    }
+
+</script>
